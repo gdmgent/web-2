@@ -1,0 +1,69 @@
+:root {
+  --padding-base: 1rem;
+  --primary: red;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: white;
+  }
+}
+
+html,
+body,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background-color: bisque;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  & :is(.card__title, .card__subtitle) {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--padding-base);
+  container-name: testeroo;
+  container-type: inline-size;
+
+  @container testeroo (width < 400px) {
+    .card {
+      background-color: var(--primary);
+    }
+  }
+}
+
+// .card:has(.card__subtitle) .card__title {
+//   margin-bottom: 0;
+// }
+
+.card__title:has(+ .card__subtitle) {
+  margin-bottom: 0;
+}
+
+:is(.card-container, .card-list):has(.card:hover) .card:not(:hover) {
+  filter: blur(2px);
+}
+
+button:focus {
+  outline: none;
+}
+
+button::focus-visible {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.list li::marker {
+  content: "🔥";
+  color: red;
+  font-size: 2rem;
+}

@@ -1,0 +1,9 @@
+.btn {
+  background-color: var(--primary);
+  color: var(--light);
+
+  &:hover {
+    text-decoration: none;
+    background-color: var(--dark);
+  }
+}

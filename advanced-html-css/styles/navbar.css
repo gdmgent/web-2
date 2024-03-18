@@ -1,0 +1,15 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-base);
+
+  & .navbar__link {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+  }
+
+  & a {
+    margin: 0;
+  }
+}

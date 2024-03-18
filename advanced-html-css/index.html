@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+        <link rel="stylesheet" href="/styles/general.css">
+        <link rel="stylesheet" href="/styles/navbar.css">
+        <link rel="stylesheet" href="/styles/logo.css">
+        <link rel="stylesheet" href="/styles/btn.css">
+        <link rel="stylesheet" href="/styles/layout.css">
+        <link rel="stylesheet" href="/styles/actions.css">
+        <link rel="stylesheet" href="/styles/sidebar.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a class="logo navbar__logo" href="/">
+                    <span>Flowbite</span>
+                </a>
+
+                <ul class="navbar__list">
+                    <li><a href="/company">Company</a></li>
+                    <li><a href="#marketplace">Marketplace</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <ul class="navbar__cta">
+                    <li><button class="navbar__link">Log in</button></li>
+                    <li><a class="btn" href="/get-started">Get started</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <aside class="layout__sidebar sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="/overview">Overview</a></li>
+                        <li>
+                            <details>
+                                <summary>Pages</summary>
+                                <ul>
+                                    <li><a href="/product-lists">Product List</a></li>
+                                    <li><a href="/billing">Billing</a></li>
+                                    <li><a href="/invoice">Invoice</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Sales</summary>
+                                <ul>
+                                    <li><a href="/product-lists">Product List</a></li>
+                                    <li><a href="/billing">Billing</a></li>
+                                    <li><a href="/invoice">Invoice</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li><a href="/messages">Messages</a></li>
+                        <li>
+                            <details>
+                                <summary>Authentication</summary>
+                                <ul>
+                                    <li><a href="/two-factor">2 Factor</a></li>
+                                    <li><a href="/billing">Privacy Policy</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul>
+                        <li><a href="/docs">Docs</a></li>
+                        <li><a href="/components">Components</a></li>
+                        <li><a href="/help">Help</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <section class="layout__content">
+                <map name="banner">
+                    <area shape="rect" coords="10, 10" href="https://maps.google.com" alt="Link to Google Maps"
+                        target="_blank" rel="noopener norefferer">
+                </map>
+
+                <img src="/fallback.jpg" alt="Image of a Google Map" usemap="#banner">
+
+                <p>Quisque rhoncus ex ut odio fermentum, et iaculis massa tempus.</p>
+
+                <form action="">
+                    <fieldset>
+                        <legend>Selectie van koekjes:</legend>
+
+                        <label>
+                            <span>Dinokoekjes</span>
+                            <input type="checkbox" name="dino_cookies">
+                        </label>
+
+                        <label>
+                            <span>Zandkoekjes</span>
+                            <input type="checkbox" name="sand_cookies">
+                        </label>
+
+                        <label>
+                            <span>Pims</span>
+                            <input type="checkbox" name="pims">
+                        </label>
+                    </fieldset>
+                </form>
+            </section>
+
+            <aside class="layout__actions actions">
+                <ul>
+                    <li><button>Share</button></li>
+                    <li>
+                        <button popovertarget="print">Print</button>
+                        <small id="print" popover>Print pagina</small>
+                    </li>
+                    <li><button>Download</button></li>
+                    <li><button>Copy</button></li>
+                    <li><button>Add</button></li>
+                </ul>
+            </aside>
+        </main>
+
+        <footer>
+            <nav>
+                <a href="/">Flowbite</a>
+
+                <address>
+                    <ul>
+                        <li><a href="tel: 0912345677">0912345677</a></li>
+                        <li><a href="mailto: info@flowbite.com">info@flowbite.com</a></li>
+                        <li><a href="https://maps.google.com" target="_blank" rel="noopener norefferer">Navigate</a>
+                        </li>
+                    </ul>
+                </address>
+            </nav>
+
+            <nav>
+                <ul>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </nav>
+        </footer>
+
+        <dialog>
+            <button>Close</button>
+
+            <strong>Sign in to our platform</strong>
+
+            <form action="">
+                <label>
+                    <span>Your email</span>
+                    <input type="email" name="email">
+                </label>
+
+                <label>
+                    <span>Password</span>
+                    <input type="password" name="password">
+                </label>
+
+                <div>
+                    <label>
+                        <span>Remember me</span>
+                        <input type="checkbox" name="remember_me">
+                    </label>
+
+                    <a href="/lost-password" target="_blank" rel="noopener noreferrer">Lost password</a>
+                </div>
+
+                <button>Create account</button>
+                <button type="button">Close modal</button>
+            </form>
+
+            <span>
+                Not registered? <a href="/register">Create account</a>
+            </span>
+        </dialog>
+    </body>
+</html>
