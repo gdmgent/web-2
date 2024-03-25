@@ -1,0 +1,20 @@
+.dialog {
+  opacity: 1;
+  scale: 1;
+  transition: opacity 2s ease, scale 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  @starting-style {
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+// a {
+//   color: blue;
+//   transition: color 0.2s ease;
+
+//   &:hover {
+//     color: red;
+//     transition: color 1s linear;
+//   }
+// }

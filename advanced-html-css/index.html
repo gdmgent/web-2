@@ -12,9 +12,13 @@
         <link rel="stylesheet" href="/styles/layout.css">
         <link rel="stylesheet" href="/styles/actions.css">
         <link rel="stylesheet" href="/styles/sidebar.css">
+        <link rel="stylesheet" href="/styles/wrapper.css">
+        <link rel="stylesheet" href="/styles/footer.css">
+        <link rel="stylesheet" href="/styles/dialog.css">
+        <link rel="stylesheet" href="/styles/animations.css">
     </head>
     <body>
-        <header>
+        <header class="wrapper">
             <nav class="navbar">
                 <a class="logo navbar__logo" href="/">
                     <span>Flowbite</span>
@@ -29,13 +33,15 @@
                 </ul>
 
                 <ul class="navbar__cta">
-                    <li><button class="navbar__link">Log in</button></li>
+                    <li>
+                        <button data-dialog-trigger="sign-in-dialog" class="navbar__link">Log in</button>
+                    </li>
                     <li><a class="btn" href="/get-started">Get started</a></li>
                 </ul>
             </nav>
         </header>
 
-        <main class="layout">
+        <main class="layout wrapper">
             <aside class="layout__sidebar sidebar">
                 <nav>
                     <ul>
@@ -81,6 +87,8 @@
             </aside>
 
             <section class="layout__content">
+                <button data-dialog-trigger="test-dialog">Open nieuwe modal</button>
+
                 <map name="banner">
                     <area shape="rect" coords="10, 10" href="https://maps.google.com" alt="Link to Google Maps"
                         target="_blank" rel="noopener norefferer">
@@ -110,6 +118,48 @@
                         </label>
                     </fieldset>
                 </form>
+
+                <p>Vestibulum ac neque ac ex pretium elementum. Ut pharetra nulla nec ex ullamcorper, aliquam venenatis
+                    tortor venenatis. Aenean tincidunt est vel condimentum accumsan. Proin eget suscipit magna. Donec
+                    tincidunt ex in elementum volutpat. Fusce euismod euismod dictum. Etiam sapien lorem, gravida vel
+                    magna eget, pretium efficitur sapien. Vestibulum finibus ante felis. Quisque ornare, tortor ac
+                    malesuada tincidunt, quam arcu tempus justo, non rhoncus orci quam id leo. Sed leo lacus, maximus eu
+                    ultricies quis, varius feugiat neque. Ut facilisis nulla sit amet rhoncus consequat. Integer gravida
+                    dolor non dapibus cursus.
+
+                    Aenean lobortis vehicula tortor, quis semper purus facilisis ut. Morbi id sollicitudin mauris.
+                    Mauris quis nisi sit amet purus laoreet posuere. Sed at vulputate tellus. Pellentesque in nibh
+                    purus. Sed velit mauris, elementum a interdum a, commodo eget orci. Phasellus posuere laoreet velit,
+                    non tincidunt libero fermentum eget. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                    In sit amet massa sed magna auctor placerat non quis diam. Etiam porttitor aliquet risus, vitae
+                    mattis lorem eleifend ut. Nunc feugiat condimentum elementum. Quisque non pretium sapien. Aenean eu
+                    malesuada augue.
+
+                    Aenean hendrerit, arcu eu tristique ultricies, ante magna rhoncus turpis, non sollicitudin sapien
+                    enim eu metus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam eget lectus vitae
+                    magna auctor luctus. Cras velit dolor, tincidunt ut placerat a, elementum sit amet est. Suspendisse
+                    fringilla nisi quis scelerisque accumsan. Cras sit amet enim id leo semper finibus id nec lorem. Sed
+                    id ligula eu massa hendrerit luctus id nec nulla. Cras eget sem nisi. Interdum et malesuada fames ac
+                    ante ipsum primis in faucibus. Vivamus viverra sem lacus, et facilisis urna interdum ut. Proin
+                    rutrum rutrum ligula in accumsan. Duis laoreet, dolor non mollis tincidunt, ligula libero rhoncus
+                    quam, quis laoreet ante tortor posuere dolor.
+                </p>
+
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
+                <p class="fade-in">Dit moet infaden!</p>
             </section>
 
             <aside class="layout__actions actions">
@@ -126,8 +176,8 @@
             </aside>
         </main>
 
-        <footer>
-            <nav>
+        <footer class="footer">
+            <nav class="footer__main wrapper">
                 <a href="/">Flowbite</a>
 
                 <address>
@@ -140,21 +190,23 @@
                 </address>
             </nav>
 
-            <nav>
-                <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                </ul>
+            <nav class="footer__mini">
+                <div class="wrapper">
+                    <ul>
+                        <li><a href="">Navigatie</a></li>
+                        <li><a href="">Navigatie</a></li>
+                        <li><a href="">Navigatie</a></li>
+                        <li><a href="">Navigatie</a></li>
+                        <li><a href="">Navigatie</a></li>
+                        <li><a href="">Navigatie</a></li>
+                        <li><a href="">Navigatie</a></li>
+                    </ul>
+                </div>
             </nav>
         </footer>
 
-        <dialog>
-            <button>Close</button>
+        <dialog data-dialog="sign-in-dialog">
+            <button data-action='close'>Close</button>
 
             <strong>Sign in to our platform</strong>
 
@@ -179,12 +231,24 @@
                 </div>
 
                 <button>Create account</button>
-                <button type="button">Close modal</button>
+                <button data-action='close' type="button">Close modal</button>
             </form>
 
             <span>
                 Not registered? <a href="/register">Create account</a>
             </span>
         </dialog>
+
+        <dialog class="dialog" data-dialog="test-dialog">
+            Dit is een test
+
+            <form method="dialog">
+                <button>Close</button>
+            </form>
+
+            <button data-action='close'>Sluit maar!</button>
+        </dialog>
+
+        <script src="/scripts/main.js" type="module"></script>
     </body>
 </html>

@@ -1,0 +1,13 @@
+.fade-in-test {
+  animation: fadeIn 2s ease-out;
+  animation-timeline: view();
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

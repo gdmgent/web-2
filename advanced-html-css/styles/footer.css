@@ -1,0 +1,10 @@
+.footer {
+  & .footer__mini {
+    background-color: var(--faded);
+  }
+
+  & .footer__main {
+    display: flex;
+    align-items: center;
+  }
+}

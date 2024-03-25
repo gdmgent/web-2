@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   align-items: center;
-  padding: var(--spacing-base);
+  padding: var(--spacing-base) 0;
 
   & .navbar__link {
     background-color: transparent;
