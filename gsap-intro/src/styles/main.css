@@ -1,0 +1,8 @@
+@import "box.css";
+@import "circle.css";
+
+.timeline-test {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

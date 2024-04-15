@@ -1,0 +1,13 @@
+:root {
+  --box-size: 7rem;
+  --primary-color: red;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--box-size);
+  background-color: var(--primary-color);
+  aspect-ratio: 1/1;
+}

@@ -1,0 +1,6 @@
+.circle {
+  width: 9rem;
+  aspect-ratio: 1;
+  border-radius: 4.5rem;
+  background-color: pink;
+}
