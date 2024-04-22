@@ -1,40 +1,19 @@
 import React from 'react';
-
-const posts = [
-    {
-        id: 1,
-        slug: 'post-one',
-        title: 'Post One',
-        description: 'This is the first post.'
-    },
-    {
-        id: 2,
-        slug: 'post-two',
-        title: 'Post Two',
-        description: 'This is the second post.'
-    },
-    {
-        id: 3,
-        slug: 'post-three',
-        title: 'Post Three',
-        description: 'This is the third post.'
-    },
-    {
-        id: 4,
-        slug: 'post-four',
-        title: 'Post Four',
-        description: 'This is the fourth post.'
-    }
-];
+import { Link, useLoaderData } from 'react-router-dom';
+import ROUTES from '../constants/routes'
 
 const Blog = () => {
+    const posts = useLoaderData();
+
     return (
         <>
             <div>Blog</div>
 
             <ul>
                 {posts.map(post => <li key={post.id}>
-                    {post.title}
+                    <Link to={`${ROUTES.BLOG}/${post.slug}`}>
+                        {post.title}
+                    </Link>
                 </li>)}
             </ul>
         </>
