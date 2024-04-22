@@ -11,7 +11,7 @@ const Blog = () => {
 
             <ul>
                 {posts.map(post => <li key={post.id}>
-                    <Link to={`${ROUTES.BLOG}/${post.slug}`}>
+                    <Link to={`${ROUTES.BLOG}/${post.id}`}>
                         {post.title}
                     </Link>
                 </li>)}

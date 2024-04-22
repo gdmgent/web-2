@@ -10,16 +10,19 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 
+const POST_URL = 'https://jsonplaceholder.typicode.com/posts'; // '/src/data/posts.json'
+
 async function loadPosts() {
-  const response = await fetch('/src/data/posts.json');
+  const response = await fetch(POST_URL);
   const posts = await response.json();
   return posts;
 }
 
 // loadPost die op basis van een slug een post kan returnen.
-async function loadPost(slug) {
-  const posts = await loadPosts();
-  return posts.find(post => post.slug === slug)
+async function loadPost(postId) {
+  const response = await fetch(`${POST_URL}/${postId}`);
+  const post = await response.json();
+  return post;
 }
 
 const myCustomRouter = createBrowserRouter([
@@ -48,9 +51,9 @@ const myCustomRouter = createBrowserRouter([
             // Geef alle posts door vanuit mijn JSON.
           },
           {
-            path: `${ROUTES.BLOG}/:postSlug`,
+            path: `${ROUTES.BLOG}/:postId`,
             element: <BlogPost />,
-            loader: ({params}) => loadPost(params.postSlug)
+            loader: ({ params }) => loadPost(params.postId)
             // Geef éen post door op basis van postSlug
           }
         ]
