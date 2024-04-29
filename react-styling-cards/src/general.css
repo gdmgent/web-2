@@ -1,0 +1,22 @@
+:root {
+  --brand: hsl(233, 100%, 96%);
+  --light: hsl(0, 0%, 98%);
+  --dark: hsl(0, 0%, 10%);
+
+  --spacing-small: 0.5rem;
+  --spacing-base: 1rem;
+}
+
+body {
+  background-color: var(--brand);
+  font-family: "Verdana", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+}
+
+section {
+  margin: 5rem 0;
+}

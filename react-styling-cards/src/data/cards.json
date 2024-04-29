@@ -1,0 +1,20 @@
+[
+    {
+        "title": "JS Quickstart",
+        "description": "Quisque rhoncus ex ut odio fermentum, et iaculis massa tempus.",
+        "rating": 4,
+        "image": "https://picsum.photos/id/3/600/300"
+    },
+    {
+        "title": "Object Oriented JS",
+        "description": "Sed mauris dui, viverra non hendrerit sit amet, interdum et erat. Sed urna ipsum, pharetra quis porta ac, dignissim id ligula.",
+        "rating": 1,
+        "image": "https://picsum.photos/id/4/600/300"
+    },
+    {
+        "title": "Landscape of JS",
+        "description": "Praesent fringilla augue sem, vitae tempor sapien cursus vel.",
+        "rating": 3,
+        "image": "https://picsum.photos/id/6/600/300"
+    }
+]

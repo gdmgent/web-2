@@ -1,0 +1,30 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+  background-color: var(--light);
+  padding: var(--spacing-small);
+  border-radius: var(--spacing-small);
+  max-width: 300px;
+
+  & .card__image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+
+  & .card__title {
+    font-size: 1.5rem;
+  }
+
+  & .card__bottom {
+    margin-top: auto;
+    font-size: 1.25rem;
+  }
+}
